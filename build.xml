@@ -1,0 +1,140 @@
+<?xml version="1.0" standalone="yes"?>
+
+<!-- ========================================================= -->
+<!-- A simple ant buildfile.                                   -->
+<!-- See "http://leriaat.web.elte.hu/" for more Java programs! -->
+<!-- Author: Legendi Richard Oliver                            -->
+<!-- ========================================================= -->
+
+<!-- Hey, man. You MUST learn this. Ant makes your life easier! -->
+<project name="JYzer" default="all" basedir=".">
+
+  <description>
+    A simple build.xml file for almost every jars at http://leriaat.web.elte.hu
+  </description>
+
+  <!-- Set global properties for this build. -->
+  <property name="jar.name" value="${ant.project.name}.jar"/>
+  <property name="jar.mainclass" value="jyzer.JYzer"/>
+  <property name="jar.classpath" value=". lib/ratlib.jar lib/jh.jar"/>
+  
+  <property name="doc_dir"       value="doc/javadoc"/>
+  <property name="src_dir"       value="src"/>
+  <property name="bld_dir"       value="build"/>
+  
+  <!-- Simple usage info.-->
+  <target name="help">
+    <echo message="********************************************************"/>
+    <echo message="* help      Displays this info.                        *"/>
+    <echo message="********************************************************"/>
+    <echo message="* all       Makes compilation, genjar, clean [DEFAULT] *"/>
+    <echo message="* full      Creates the next stable build              *"/>
+    <echo message="********************************************************"/>
+    <echo message="* compile   Compiles the source                        *"/>
+    <echo message="* genjar    Generates the new jar file                 *"/>
+    <echo message="* clean     Deleting old jar files                     *"/>
+    <echo message="* javadoc   Generates javadoc of this project          *"/>
+    <echo message="********************************************************"/>
+  </target>
+
+  <!-- Make all of the needed operations. -->
+  <target name="all" 
+  	  depends="compile,
+  	  	   genjar,
+  	  	   clean"
+  	  description="Building the project">
+    <echo message="Made: compilation, jar, clean."/>
+  </target>
+  
+  <!-- To create a new build of this lib. -->
+  <target name="full"
+  	  depends="javadoc, 
+  	           all"
+  	  description="Creating new build.">
+    <echo message="Made: new build."/>
+  </target>  
+
+  <!-- Creating the API documentation. -->
+  <target name="javadoc">
+    <echo message="Making javadoc..."/>
+    <javadoc packagenames="jyzer, jyzer.gui, jyzer.gui.guihelpers, jyzer.items, jyzer.items.accessflags, 
+    			   jyzer.items.attributes, jyzer.items.attributes.types, jyzer.items.attributes.helpers,
+    			   jyzer.items.constantpool, jyzer.items.constantpool.types, jyzer.items.exceptions, 
+    			   jyzer.items.factories, jyzer.items.fields, jyzer.items.methods"
+             sourcepath="${src_dir}"
+             destdir="${doc_dir}"
+             author="true"
+             bottom="See http://leriaat.web.elte.hu/ for more Java programs!"
+             use="true"
+             version="true"
+             windowtitle="JYzer v0.1 guide"/>
+  </target>
+
+  <!-- Compile the java code from ${src_dir}. -->
+  <target name="compile" 
+  	  description="Compile the source">
+    <echo message="Compiling the Java sourcecode from ${src_dir}."/>
+    <mkdir dir="${bld_dir}"/>
+    <javac srcdir="${src_dir}" 
+    	   destdir="${bld_dir}"
+    	   source="1.5"
+    	   target="1.5"
+    	   debug="on"
+    	   optimize="on"
+    	   deprecation="on"
+    	   verbose="off">
+   
+      <classpath>
+        <fileset dir="lib">
+          <include name="**/*.jar"/>
+        </fileset>        
+      </classpath>
+
+      <!-- Show annotation warnings. -->
+      <compilerarg value="-Xlint:unchecked"/>
+
+      <!-- Generate all debugging info. -->
+      <compilerarg value="-g"/>
+
+      <!-- No debugging info to speed-up the compilation. -->
+      <compilerarg value="-deprecation"/>
+
+    </javac>
+  </target>
+
+  <!-- Put bytecodes in ${bld_dir} into a jar file. -->
+  <target name="genjar" 
+  	  depends="compile"
+  	  description="Generate the jarfile">
+    <echo message="Put everything in ${bld_dir} into a jar file."/>
+    <jar destfile="${ant.project.name}.jar" 
+    	 basedir="${bld_dir}"
+    	 compress="on">
+    	 <manifest>
+    	   <attribute name="Built-By"   value="Legendi Richard Oliver"/>
+    	   <attribute name="Class-Path" value="${jar.classpath}"/>
+    	   <attribute name="Main-Class" value="${jar.mainclass}"/>
+    	 </manifest>
+    </jar>
+  </target>
+
+  <!-- Delete the build directory tree. -->
+  <target name="clean" 
+  	  depends="genjar"
+  	  description="Cleaning up">
+    <echo message="Delete the build directory tree."/>
+    <delete dir="${bld_dir}"/>
+  </target>
+  
+  <!-- Just to turn off the JIT compiler during development. -->
+  <target name="run"
+  	  depends="all"
+  	  description="Running the program">
+    <echo message="Running project..."/>
+    <java jar="${jar.name}"
+    	  fork="true">
+      <arg value="-Djava.compiler=NONE"/>
+    </java>
+  </target>
+  
+</project>

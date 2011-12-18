@@ -1,0 +1,7 @@
+0.18: Initial beta release (2005. nov.17).
+-----
+
+	My long-waited program has become stable!!! It's usable, 
+	although it has a lot of defectiveness. The documentation
+	is done.
+	

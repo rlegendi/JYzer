@@ -1,0 +1,15 @@
+ - Beautify code output in CodeInstruction.java
+ - check !massively! the instructions!
+
+ - CP: find a better datastructure for improve access/creation efficency.
+ - CP: implement the logging if a wrong index is given to the static getters.
+
+ - Check "index <-> offset" if there's no crash in CodeIstruction.
+
+ - For the disassembled source: 
+	- write the singatures of classes!
+	- should hava syntax highlighting...
+
+ - Create a main logger class to handle errors.
+ - Annotation implementation is missing ...
+ - Need a preferences dialog.

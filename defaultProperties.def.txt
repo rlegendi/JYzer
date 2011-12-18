@@ -1,0 +1,5 @@
+#--- Program properties ---
+#Thu Nov 17 08:12:48 CET 2005
+path.lastopen=.
+path.lastsave=.
+recent.size=0

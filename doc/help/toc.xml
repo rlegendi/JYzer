@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+         
+<toc version="1.0">
+
+  <tocitem text="About">
+    <tocitem text="Introduction" target="about.intro" />
+    <tocitem text="Todo List"    target="about.todo" />
+    <tocitem text="Versions"     target="about.versions" />
+  </tocitem>
+  
+  <tocitem text="Developer documentation">
+    <tocitem text="Javadoc" target="dev.javadoc" />
+    <tocitem text="The JVM Specification (2nd ed.)" target="dev.vmspec">
+  </tocitem>
+  
+</toc>

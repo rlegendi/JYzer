@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+
+<index version="1.0">
+    <indexitem text="Preamble" target="about.intro" />
+    <indexitem text="Classfile versions" target="about.intro" />
+    <indexitem text="System requirements" target="about.intro" />
+    <indexitem text="How to compile" target="about.intro" />
+    <indexitem text="Last words" target="about.intro" />
+    <indexitem text="Last dwords" target="about.intro" />
+    <indexitem text="author" target="about.intro" />
+    
+    <indexitem text="TODO" target="about.todo" />
+
+    <indexitem text="0.18" target="about.versions" />
+
+</index>
