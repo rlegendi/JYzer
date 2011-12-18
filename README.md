@@ -1,7 +1,7 @@
 README
 ======
 
-	Hi all! 
+Hi all! 
 
 Preamble
 --------
@@ -83,19 +83,19 @@ I have got some tips and *really a lot of help* from the following projects.
 Hopefully haven't miswritten anything ...
 
 - ClassEditor by Tanmay K. M.
-	http://classeditor.sourceforge.net
+  http://classeditor.sourceforge.net
 
 - Dis by ???
-	http://www.cs.princeton.edu/~benjasik/dis/
+  http://www.cs.princeton.edu/~benjasik/dis/
 	
 - Jad by Pavel Kouznetsov (kpdus@softhome.net)
-	http://www.kpdus.com/jad.html
+  http://www.kpdus.com/jad.html
 
 - Javel by Laurent Gregoire <l.gregoire@iname.com>
-	???
+  ???
 
-- Reversepro by Karthik Kumar akkumar@users.sourceforge.net. 
-	http://jrevpro.sourceforge.net
+- Reversepro by Karthik Kumar akkumar@users.sourceforge.net.
+  http://jrevpro.sourceforge.net
 
 Last dwords
 -----------
@@ -110,12 +110,12 @@ in the background while I was coding:
 
 - Terrorgruppe (they are a very cool band - really deutschepunk!)
 - Anti-Flag
-- HatÛs·gilag Tilos (they are Hungarian guys - one of the best we have!)
+- Hat√≥s√°gilag Tilos (they are Hungarian guys - one of the best we have!)
 - Dead Kennedys (I don't know whether they know that 29A has used one of 
 	their song, "Holiday in Cambodia" I think in issue #8 ... Funny ;-) )
 - Sepultura (especially for that funny song with Luciano Pavarotti - I wasn't 
 	able to stop laughing when I first heard it :-)))))) )
-- KatÈter Rap Yam (some of my friends; especially for singing about a pub 
+- Kat√©ter Rap Yam (some of my friends; especially for singing about a pub 
 	where we used to drink :-) )
 	
 'bout me:
@@ -126,7 +126,7 @@ in Hungarian, but most of the comments in the codes are in English.
 
 The other projects DO have sense ;-) At least hopefully ...
 
- * Creted by : LegÈndi Rich·rd OlivÈr
+ * Creted by : Leg√©ndi Ric√°rd Oliv√©r
  * E-mail    : leriaat@elte.hu
  * Webpage   : http://people.inf.elte.hu/legendi
 
